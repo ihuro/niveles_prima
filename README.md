@@ -55,7 +55,7 @@ The script keep a log file with the retrieved values for `RX` and `TX`:
 # Execution
 
     $ python niveles_prima.py
-    
+
 ## Monitoring
 
 A way to monitoring a connection could be using the `watch` command.
@@ -63,3 +63,13 @@ A way to monitoring a connection could be using the `watch` command.
 For example, to check the levels (and store them in the log file) every minute:
 
     $ watch -cn 60 python niveles_prima.py
+
+# Docker execution
+
+## Build the image
+
+    $ docker build -t niveles-prima .
+
+## Run the container
+
+    $ docker run -it --rm --name check-niveles-prima niveles-prima
